@@ -13,9 +13,9 @@ const AddCategory = ({ setCategory }) => {
   //==================================================
   const handlerSubmit = (e) => {
     e.preventDefault();
-    console.log(Input);
+
     if (Input.trim().length > 2) {
-      setCategory((cat) => [...cat, Input]);
+      setCategory(Input);
       setInput("");
     }
   };
@@ -23,7 +23,6 @@ const AddCategory = ({ setCategory }) => {
   return (
     <div>
       <form onSubmit={handlerSubmit}>
-        <h2>Add Category</h2>
         <input type="text" value={Input} onChange={handleChange} />
       </form>
     </div>

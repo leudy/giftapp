@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import AddCategory from "./AddCategory";
-import {GiftsGrid}  from './Gifts/GiftsGrid'
+import { GiftsGrid } from "./Gifts/GiftsGrid";
 export const GifApp = () => {
-  const [category, setcategory] = useState(["Goku"]);
-
-  // const handleAdd = (e) => {
-  //   setcategory([...category, "Jueves"]);
-  // };
+  const [category, setcategory] = useState("Goku");
 
   return (
     <div>
-      <h2>GifApp</h2>
-      <hr /> 
+      <div style={{ textAlign: "center", fontSize: "3rem" }}>
+        <h2>GiftApp</h2>
+      </div>
+      <p>Developed by Leudi Rosario C.</p>
+      <hr />
       <AddCategory setCategory={setcategory}></AddCategory>
-        <GiftsGrid  criteria={category[0]}></GiftsGrid>
+      <GiftsGrid criteria={category}></GiftsGrid>
     </div>
   );
 };
