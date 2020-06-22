@@ -23,7 +23,12 @@ const AddCategory = ({ setCategory }) => {
   return (
     <div>
       <form onSubmit={handlerSubmit}>
-        <input type="text" value={Input} onChange={handleChange} />
+        <input
+          type="text"
+          value={Input}
+          placeholder="(Buscador / Finder) .... Vegeta, Goku, OnePuch"
+          onChange={handleChange}
+        />
       </form>
     </div>
   );
